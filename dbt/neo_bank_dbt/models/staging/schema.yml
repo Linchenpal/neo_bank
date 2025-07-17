@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: neobank_data_raw
+    database: sacred-choir-466017-s9
+    schema: neobank_data_raw
+    tables:
+      - name: raw_users
+      - name: raw_devices
+      - name: raw_notifications
+      - name: raw_transactions
