@@ -3,7 +3,7 @@ name = "02-Upload"
 version = "0.1.0"
 description = ""
 readme = "README.md"
-packages = [{include = "scraper"}]
+packages = [{ include = "scripts" }]
 
 [tool.poetry.dependencies]
 python = "<3.13,>=3.9"
