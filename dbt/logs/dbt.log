@@ -1,0 +1,31 @@
+[0m00:30:04.641959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732859c63bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73285ca4e890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732859df6550>]}
+
+
+============================== 00:30:04.647310 | 6653c73f-fd7e-42f4-b06e-ddabbccac60d ==============================
+[0m00:30:04.647310 [info ] [MainThread]: Running with dbt=1.10.4
+[0m00:30:04.648473 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/neobanking2025/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt init neo_bank_dbt', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:30:04.720979 [info ] [MainThread]: Creating dbt configuration folder at /home/neobanking2025/.dbt
+[0m00:30:04.723335 [debug] [MainThread]: Starter project path: /home/neobanking2025/projects/neo_bank/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m00:30:04.726938 [info ] [MainThread]: 
+Your new dbt project "neo_bank_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:30:04.727767 [info ] [MainThread]: Setting up your profile.
+[0m00:49:42.346539 [info ] [MainThread]: Profile neo_bank_dbt written to /home/neobanking2025/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:49:42.348046 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 1177.7983, "process_in_blocks": "0", "process_kernel_time": 1.287389, "process_mem_max_rss": "393344", "process_out_blocks": "784", "process_user_time": 6.155793}
+[0m00:49:42.349397 [debug] [MainThread]: Command `dbt init` succeeded at 00:49:42.349192 after 1177.80 seconds
+[0m00:49:42.350215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732859c61e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73285e320390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73285e2028d0>]}
+[0m00:49:42.351013 [debug] [MainThread]: Flushing usage events
+[0m00:49:42.719559 [debug] [MainThread]: An error was encountered while trying to flush usage events
