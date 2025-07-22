@@ -1,0 +1,298 @@
+[0m11:50:28.478709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7624007bd790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7624007bcf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7624007bf010>]}
+
+
+============================== 11:50:28.542576 | 5e86f30c-36d1-4968-a177-71a2ddaecb64 ==============================
+[0m11:50:28.542576 [info ] [MainThread]: Running with dbt=1.10.4
+[0m11:50:28.543702 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'quiet': 'False', 'log_format': 'default', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'version_check': 'True', 'static_parser': 'True', 'log_path': 'logs', 'invocation_command': 'dbt run --select stg_*', 'introspect': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/linam.palacios/.dbt', 'use_colors': 'True'}
+[0m11:50:28.544691 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:50:28.546766 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.16356863, "process_in_blocks": "80", "process_kernel_time": 0.46611, "process_mem_max_rss": "117468", "process_out_blocks": "2704", "process_user_time": 3.788223}
+[0m11:50:28.547730 [debug] [MainThread]: Command `dbt run` failed at 11:50:28.547478 after 0.16 seconds
+[0m11:50:28.548555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76240536ea90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762404f0a050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7624007bc990>]}
+[0m11:50:28.549370 [debug] [MainThread]: Flushing usage events
+[0m11:50:29.022295 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:05:40.317642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943b5a1010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943b598d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943b5a02d0>]}
+
+
+============================== 12:05:40.323643 | 60476209-eb4f-4e69-8115-6e988fecbe83 ==============================
+[0m12:05:40.323643 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:05:40.324956 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'version_check': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'fail_fast': 'False', 'log_format': 'default', 'warn_error': 'None', 'empty': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'debug': 'False', 'no_print': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'printer_width': '80', 'write_json': 'True', 'use_colors': 'True', 'profiles_dir': '/home/linam.palacios/.dbt'}
+[0m12:05:40.340836 [info ] [MainThread]: dbt version: 1.10.4
+[0m12:05:40.341700 [info ] [MainThread]: python version: 3.11.9
+[0m12:05:40.342461 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m12:05:40.343137 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m12:05:45.209541 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m12:05:45.210577 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m12:05:45.211372 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m12:05:45.212589 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:05:45.213796 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.989888, "process_in_blocks": "1568", "process_kernel_time": 1.167337, "process_mem_max_rss": "388308", "process_out_blocks": "5568", "process_user_time": 7.839109}
+[0m12:05:45.214616 [debug] [MainThread]: Command `dbt debug` failed at 12:05:45.214406 after 4.99 seconds
+[0m12:05:45.215283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943fbcaad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943b5f4590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71943fa02bd0>]}
+[0m12:05:45.216040 [debug] [MainThread]: Flushing usage events
+[0m12:05:45.601104 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:23:15.814397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cb91d1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cb91d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cb599690>]}
+
+
+============================== 12:23:15.819744 | 48b93b8c-2f76-45bf-aa6f-34a56e1a8b80 ==============================
+[0m12:23:15.819744 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:23:15.820981 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'printer_width': '80', 'log_format': 'default', 'warn_error': 'None', 'log_path': 'logs', 'profiles_dir': '/home/linam.palacios/.dbt', 'indirect_selection': 'eager', 'version_check': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'write_json': 'True', 'debug': 'False', 'introspect': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False'}
+[0m12:23:15.837699 [info ] [MainThread]: dbt version: 1.10.4
+[0m12:23:15.838761 [info ] [MainThread]: python version: 3.11.9
+[0m12:23:15.839739 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m12:23:15.840671 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m12:23:20.187276 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m12:23:20.188228 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m12:23:20.189156 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m12:23:20.190046 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:23:20.191142 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.471094, "process_in_blocks": "0", "process_kernel_time": 1.139842, "process_mem_max_rss": "387092", "process_out_blocks": "8", "process_user_time": 7.749394}
+[0m12:23:20.191968 [debug] [MainThread]: Command `dbt debug` failed at 12:23:20.191777 after 4.47 seconds
+[0m12:23:20.192663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cfbcaad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cb617c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c1cfa02bd0>]}
+[0m12:23:20.193541 [debug] [MainThread]: Flushing usage events
+[0m12:23:20.587132 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:41:49.688812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f08bb99b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f08bc7ab90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f08bb99c50>]}
+
+
+============================== 12:41:49.696323 | fa6e2f04-63c3-41f4-b899-adb9227782f5 ==============================
+[0m12:41:49.696323 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:41:49.698950 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'write_json': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'log_path': 'logs', 'no_print': 'None', 'partial_parse': 'True', 'version_check': 'True', 'quiet': 'False', 'empty': 'None', 'debug': 'False', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'use_colors': 'True', 'target_path': 'None', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'static_parser': 'True'}
+[0m12:41:49.704599 [error] [MainThread]: Encountered an error:
+Runtime Error
+  dbt_project.yml does not parse to a dictionary
+[0m12:41:49.708480 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.18782943, "process_in_blocks": "0", "process_kernel_time": 0.369671, "process_mem_max_rss": "101404", "process_out_blocks": "8", "process_user_time": 3.160278}
+[0m12:41:49.710266 [debug] [MainThread]: Command `cli deps` failed at 12:41:49.709902 after 0.19 seconds
+[0m12:41:49.712099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f08bb990d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f08bc90790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0901c8b10>]}
+[0m12:41:49.713468 [debug] [MainThread]: Flushing usage events
+[0m12:41:50.097727 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:44:40.751123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18b83ef410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18b849d350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18b8817890>]}
+
+
+============================== 12:44:40.773420 | 13be56e4-e44e-4376-a2e4-c7a9cb1a374d ==============================
+[0m12:44:40.773420 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:44:40.775477 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/linam.palacios/.dbt', 'introspect': 'True', 'invocation_command': 'dbt debug', 'log_cache_events': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'version_check': 'True', 'partial_parse': 'True', 'empty': 'None', 'use_colors': 'True', 'log_format': 'default', 'no_print': 'None', 'fail_fast': 'False'}
+[0m12:44:40.836310 [info ] [MainThread]: dbt version: 1.10.4
+[0m12:44:40.842586 [info ] [MainThread]: python version: 3.11.9
+[0m12:44:40.845568 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m12:44:40.850219 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m12:44:46.907902 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m12:44:46.909117 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m12:44:46.909890 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m12:44:46.910789 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:44:46.911956 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 6.6738267, "process_in_blocks": "0", "process_kernel_time": 1.167684, "process_mem_max_rss": "387072", "process_out_blocks": "16", "process_user_time": 10.446724}
+[0m12:44:46.912944 [debug] [MainThread]: Command `dbt debug` failed at 12:44:46.912674 after 6.67 seconds
+[0m12:44:46.914119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18bc9cab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18b841bf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b18b841bd50>]}
+[0m12:44:46.915206 [debug] [MainThread]: Flushing usage events
+[0m12:44:47.292050 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:53:58.372517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79123eb959d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79123eb96410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79123eb952d0>]}
+
+
+============================== 12:53:58.377716 | 1a229812-7dc0-429f-bdad-cd1e7c74d217 ==============================
+[0m12:53:58.377716 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:53:58.378846 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug', 'log_path': 'logs', 'use_colors': 'True', 'profiles_dir': '/home/linam.palacios/.dbt', 'version_check': 'True', 'empty': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'partial_parse': 'True', 'fail_fast': 'False', 'printer_width': '80', 'static_parser': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'log_format': 'default', 'write_json': 'True', 'target_path': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False'}
+[0m12:53:58.394112 [info ] [MainThread]: dbt version: 1.10.4
+[0m12:53:58.394923 [info ] [MainThread]: python version: 3.11.9
+[0m12:53:58.395670 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m12:53:58.396326 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m12:54:02.579577 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m12:54:02.580814 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m12:54:02.581722 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m12:54:02.582583 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:54:02.583833 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.3103056, "process_in_blocks": "0", "process_kernel_time": 1.121198, "process_mem_max_rss": "387252", "process_out_blocks": "8", "process_user_time": 7.266554}
+[0m12:54:02.584698 [debug] [MainThread]: Command `dbt debug` failed at 12:54:02.584497 after 4.31 seconds
+[0m12:54:02.585443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79123ec0a550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7912431cab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791243002bd0>]}
+[0m12:54:02.586231 [debug] [MainThread]: Flushing usage events
+[0m12:54:02.965073 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:46.471452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40d9fc71a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40d99921b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40da1e67b0>]}
+
+
+============================== 13:47:46.478174 | ce99eb2d-0ed6-49be-9837-096e8c2f43f8 ==============================
+[0m13:47:46.478174 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:47:46.479312 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/linam.palacios/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:47:46.566918 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:47:46.567771 [info ] [MainThread]: python version: 3.12.8
+[0m13:47:46.568496 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m13:47:46.569206 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m13:47:56.057354 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m13:47:56.058420 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m13:47:56.059319 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m13:47:56.060541 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:47:56.061728 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 9.693033, "process_in_blocks": "0", "process_kernel_time": 1.171206, "process_mem_max_rss": "395488", "process_out_blocks": "60088", "process_user_time": 12.748011}
+[0m13:47:56.062614 [debug] [MainThread]: Command `dbt debug` failed at 13:47:56.062398 after 9.69 seconds
+[0m13:47:56.063311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40da2a3260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40ba63e4b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40ba8dbf80>]}
+[0m13:47:56.064114 [debug] [MainThread]: Flushing usage events
+[0m13:47:56.445003 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:49:44.051569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b278904e840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b278758a9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2787531550>]}
+
+
+============================== 13:49:44.061026 | 66940248-131d-4428-9fb4-145a5686becd ==============================
+[0m13:49:44.061026 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:49:44.062508 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:49:44.079316 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:49:44.080229 [info ] [MainThread]: python version: 3.12.8
+[0m13:49:44.081054 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m13:49:44.081812 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m13:49:49.626393 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m13:49:49.627324 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m13:49:49.628088 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m13:49:49.628982 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:49:49.630164 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 5.6913314, "process_in_blocks": "18008", "process_kernel_time": 1.697506, "process_mem_max_rss": "383988", "process_out_blocks": "16", "process_user_time": 9.113177}
+[0m13:49:49.631028 [debug] [MainThread]: Command `dbt debug` failed at 13:49:49.630810 after 5.69 seconds
+[0m13:49:49.631780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2789001880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b27871e9730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b27685e97f0>]}
+[0m13:49:49.632637 [debug] [MainThread]: Flushing usage events
+[0m13:49:50.013223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:50:54.869913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607ddbf0440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607de261a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607deb14710>]}
+
+
+============================== 13:50:54.877494 | adf34b2e-2db1-45fd-96ab-9f761b660eb6 ==============================
+[0m13:50:54.877494 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:50:54.879119 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:50:54.897358 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:50:54.898261 [info ] [MainThread]: python version: 3.12.8
+[0m13:50:54.899072 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m13:50:54.900231 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m13:51:05.469085 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m13:51:05.470891 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m13:51:05.471984 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m13:51:05.473167 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:51:05.474884 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 10.72421, "process_in_blocks": "0", "process_kernel_time": 1.732747, "process_mem_max_rss": "383500", "process_out_blocks": "16", "process_user_time": 12.077032}
+[0m13:51:05.476895 [debug] [MainThread]: Command `dbt debug` failed at 13:51:05.476110 after 10.73 seconds
+[0m13:51:05.478278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607ddbf00e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607c197d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7607bee9bf80>]}
+[0m13:51:05.479520 [debug] [MainThread]: Flushing usage events
+[0m13:51:05.860118 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:52:38.197071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafd57f8cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafd579bf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafd53857c0>]}
+
+
+============================== 13:52:38.203464 | 630ba1ae-71d7-438d-bd7b-337fa4086395 ==============================
+[0m13:52:38.203464 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:52:38.204847 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:52:38.222254 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:52:38.223169 [info ] [MainThread]: python version: 3.12.8
+[0m13:52:38.224082 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m13:52:38.224987 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m13:52:43.164869 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m13:52:43.165843 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m13:52:43.166882 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m13:52:43.167987 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:52:43.169588 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 5.0938783, "process_in_blocks": "0", "process_kernel_time": 1.220323, "process_mem_max_rss": "383528", "process_out_blocks": "8", "process_user_time": 9.154542}
+[0m13:52:43.170549 [debug] [MainThread]: Command `dbt debug` failed at 13:52:43.170271 after 5.10 seconds
+[0m13:52:43.171264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafd75b2e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafb5d2b860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafd4c20a40>]}
+[0m13:52:43.172098 [debug] [MainThread]: Flushing usage events
+[0m13:52:43.560963 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:48:30.263547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b93793080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b92f1d070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b92e7a150>]}
+
+
+============================== 14:48:30.271026 | 0a4ecb26-2db2-4d1d-b015-5dc34c73861c ==============================
+[0m14:48:30.271026 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:48:30.272251 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:48:30.291419 [info ] [MainThread]: dbt version: 1.10.4
+[0m14:48:30.292362 [info ] [MainThread]: python version: 3.12.8
+[0m14:48:30.293095 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m14:48:30.293807 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m14:48:37.654056 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m14:48:37.655745 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m14:48:37.657035 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m14:48:37.658608 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:48:37.660998 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 7.5571055, "process_in_blocks": "0", "process_kernel_time": 1.824836, "process_mem_max_rss": "383520", "process_out_blocks": "8", "process_user_time": 12.086922}
+[0m14:48:37.662887 [debug] [MainThread]: Command `dbt debug` failed at 14:48:37.662588 after 7.56 seconds
+[0m14:48:37.663863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b95782960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b7402e720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704b92d215b0>]}
+[0m14:48:37.665214 [debug] [MainThread]: Flushing usage events
+[0m14:48:38.050847 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:52:09.857660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fdc24b4ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fdc24b7d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fdc24b5940>]}
+
+
+============================== 14:52:09.863922 | d1818541-b7d3-4c7b-95da-216e24fc02cb ==============================
+[0m14:52:09.863922 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:52:09.864997 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug --profiles-dir /home/linam.palacios/.dbt', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:52:09.880435 [info ] [MainThread]: dbt version: 1.10.4
+[0m14:52:09.881227 [info ] [MainThread]: python version: 3.12.8
+[0m14:52:09.881893 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m14:52:09.882543 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m14:52:14.706097 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m14:52:14.707039 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m14:52:14.707781 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m14:52:14.708532 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:52:14.709597 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.949706, "process_in_blocks": "0", "process_kernel_time": 1.167255, "process_mem_max_rss": "383532", "process_out_blocks": "16", "process_user_time": 8.22856}
+[0m14:52:14.710369 [debug] [MainThread]: Command `dbt debug` failed at 14:52:14.710174 after 4.95 seconds
+[0m14:52:14.711020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fdc1fb0680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fda2dda4e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fda2e43200>]}
+[0m14:52:14.711776 [debug] [MainThread]: Flushing usage events
+[0m14:52:15.082758 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:56:20.522851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e73a0ae3fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e73a0f26fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e739ff632f0>]}
+
+
+============================== 14:56:20.528926 | e9a4473b-fabb-4805-8da5-b0ead3dbab60 ==============================
+[0m14:56:20.528926 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:56:20.530298 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:56:20.545698 [info ] [MainThread]: dbt version: 1.10.4
+[0m14:56:20.546530 [info ] [MainThread]: python version: 3.12.8
+[0m14:56:20.547194 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/.venv/bin/python
+[0m14:56:20.547839 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m14:56:25.295238 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m14:56:25.296232 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m14:56:25.297044 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m14:56:25.297929 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:56:25.299065 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.8778954, "process_in_blocks": "0", "process_kernel_time": 1.089384, "process_mem_max_rss": "383788", "process_out_blocks": "16", "process_user_time": 8.204497}
+[0m14:56:25.299914 [debug] [MainThread]: Command `dbt debug` failed at 14:56:25.299701 after 4.88 seconds
+[0m14:56:25.300612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e739fe2c470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e739fe13dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7383da7710>]}
+[0m14:56:25.301553 [debug] [MainThread]: Flushing usage events
+[0m14:56:25.685448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:58:59.125406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483bee0ce00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483bf5d8e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483bedc29c0>]}
+
+
+============================== 14:58:59.131833 | a25dee24-7d47-4ab7-b494-dcd7c036c264 ==============================
+[0m14:58:59.131833 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:58:59.133099 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m14:58:59.134148 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:58:59.136132 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.11673926, "process_in_blocks": "0", "process_kernel_time": 0.376459, "process_mem_max_rss": "99576", "process_out_blocks": "8", "process_user_time": 3.817527}
+[0m14:58:59.136979 [debug] [MainThread]: Command `dbt run` failed at 14:58:59.136794 after 0.12 seconds
+[0m14:58:59.137673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483bebb0b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483c2dbb170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7483bf1e7830>]}
+[0m14:58:59.138615 [debug] [MainThread]: Flushing usage events
+[0m14:58:59.511487 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:05:01.406850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb42225d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb41a55430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb440130b0>]}
+
+
+============================== 15:05:01.508153 | b6b9da62-e632-471e-970f-b3c63656d2bd ==============================
+[0m15:05:01.508153 [info ] [MainThread]: Running with dbt=1.10.4
+[0m15:05:01.509461 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:05:01.586224 [info ] [MainThread]: dbt version: 1.10.4
+[0m15:05:01.587138 [info ] [MainThread]: python version: 3.12.8
+[0m15:05:01.587981 [info ] [MainThread]: python path: /home/linam.palacios/code/Linchenpal/neo_bank/dbt/dbt_neobank/.venv/bin/python
+[0m15:05:01.588753 [info ] [MainThread]: os info: Linux-6.8.0-1032-gcp-x86_64-with-glibc2.35
+[0m15:05:22.364834 [info ] [MainThread]: Using profiles dir at /home/linam.palacios/.dbt
+[0m15:05:22.365781 [info ] [MainThread]: Using profiles.yml file at /home/linam.palacios/.dbt/profiles.yml
+[0m15:05:22.366475 [info ] [MainThread]: Using dbt_project.yml file at /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+[0m15:05:22.367232 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:05:22.368385 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 21.069431, "process_in_blocks": "1208", "process_kernel_time": 2.229626, "process_mem_max_rss": "414216", "process_out_blocks": "220928", "process_user_time": 26.037525}
+[0m15:05:22.369191 [debug] [MainThread]: Command `dbt debug` failed at 15:05:22.368981 after 21.07 seconds
+[0m15:05:22.369887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb43b6cfb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb41511e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb21d154f0>]}
+[0m15:05:22.370653 [debug] [MainThread]: Flushing usage events
+[0m15:05:22.753834 [debug] [MainThread]: An error was encountered while trying to flush usage events
