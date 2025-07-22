@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: neobank_data_raw
+    database: sacred-choir-466017-s9  # gcp project name
+    schema: neobank_data_raw          # BigQuery dataset name
+    tables:
+      - name: raw_devices
+      - name: raw_users
+      - name: raw_transactions
+      - name: raw_notifications
