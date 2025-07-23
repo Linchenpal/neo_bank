@@ -1,6 +1,6 @@
-SELECT
-    notification_id
-    ,md5(notification_id) AS notification_hk
-    ,TIMESTAMP('{{ var("load_date") }}') AS load_date
-    ,{{ record_source('stg_notifications') }} AS record_source
-FROM {{ ref('stg_notifications') }}
+select
+    notification_id,
+    md5(notification_id) as notification_hk,
+    timestamp('{{ var("load_date") }}') as load_date
+    ,{{ record_source('stg_notifications') }} as record_source
+from {{ ref('stg_notifications') }}

@@ -1,5 +1,5 @@
-SELECT
-  user_id
-  ,device_type
-  ,{{ dbt_utils.generate_surrogate_key(['user_id', 'device_type']) }} AS device_id
-FROM {{ source('raw', 'devices') }}
+select
+    user_id,
+    device_type,
+    {{ dbt_utils.generate_surrogate_key(['user_id', 'device_type']) }} as device_id
+from {{ source('raw', 'devices') }}
