@@ -38,3 +38,23 @@ models:
       - name: record_source
         data_tests:
           - not_null
+
+  - name: link_user_device
+    description: link table connecting users and devices
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+      - name: device_hk
+        data_tests:
+          - not_null
+      - name: user_device_hk
+        data_tests:
+          - unique
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
