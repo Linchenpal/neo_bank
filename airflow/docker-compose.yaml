@@ -1,0 +1,54 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5440:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow-webserver:
+    image: apache/airflow:2.8.1
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: blablakey1234567
+      AIRFLOW__WEBSERVER__SECRET_KEY: sharedsecret12345
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'False'
+      _PIP_ADDITIONAL_REQUIREMENTS: apache-airflow-providers-google pandas dbt-bigquery google-cloud-storage
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - /app/neo-bank-key.json:/app/neo-bank-key.json
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.8.1
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: blablakey1234567
+      AIRFLOW__WEBSERVER__SECRET_KEY: sharedsecret12345
+      _PIP_ADDITIONAL_REQUIREMENTS: apache-airflow-providers-google pandas dbt-bigquery google-cloud-storage
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - /app/neo-bank-key.json:/app/neo-bank-key.json
+      - ./scripts:/opt/airflow/scripts
+    command: scheduler
+
+volumes:
+  postgres_data:
