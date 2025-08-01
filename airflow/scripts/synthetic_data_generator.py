@@ -21,10 +21,10 @@ NUM_DEVICES = 100
 # -------------------------
 
 def random_unix_date_feb_2019():
-    """Generate random UNIX timestamp for February 2019."""
+    """Generate random UNIX timestamp for February 2019 (in microseconds)."""
     day = random.randint(1, 28)
     dt = datetime(2019, 2, day)
-    return int(time.mktime(dt.timetuple()))
+    return int(time.mktime(dt.timetuple()) * 1_000_000)
 
 def upload_to_gcs(df, filename):
     """Upload a dataframe as CSV to GCS."""
