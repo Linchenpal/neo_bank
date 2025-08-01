@@ -6,7 +6,7 @@ from datetime import datetime
 BUCKET_NAME = "neobank-raw-export"
 
 # ✅ Production Dataset
-DATASET = "neobank_data_raw"
+DATASET = "test_synthetic"
 
 # Mapping between file names and real production tables
 FILE_TABLE_MAP = {
