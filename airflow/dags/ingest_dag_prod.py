@@ -10,10 +10,10 @@ DATASET = "test_synthetic"
 
 # Mapping between file names and real production tables
 FILE_TABLE_MAP = {
-    "raw_users_2019_02.csv": "raw_users",
-    "raw_transactions_2019_02.csv": "raw_transactions",
-    "raw_devices_2019_02.csv": "raw_devices",
-    "raw_notifications_2019_02.csv": "raw_notifications"
+    "raw_users_2019_02.csv": "raw_users_test",
+    "raw_transactions_2019_02.csv": "raw_transactions_test",
+    "raw_devices_2019_02.csv": "raw_devices_test",
+    "raw_notifications_2019_02.csv": "raw_notifications_test"
 }
 
 default_args = {
