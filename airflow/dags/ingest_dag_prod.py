@@ -5,10 +5,10 @@ from datetime import datetime
 # ---- Config ----
 BUCKET_NAME = "neobank-raw-export"
 
-# ✅ Production Dataset
+# ✅ Test Dataset
 DATASET = "test_synthetic"
 
-# Mapping between file names and real production tables
+# ✅ Mapping between file names and test tables
 FILE_TABLE_MAP = {
     "raw_users_2019_02.csv": "raw_users_test",
     "raw_transactions_2019_02.csv": "raw_transactions_test",
@@ -28,14 +28,22 @@ with DAG(
     tags=["gcs_ingestion", "prod"]
 ) as dag:
 
+    load_tasks = []  # list to store all tasks
+
     for file_name, table_name in FILE_TABLE_MAP.items():
-        GCSToBigQueryOperator(
+        task = GCSToBigQueryOperator(
             task_id=f"load_{table_name}",
             bucket=BUCKET_NAME,
             source_objects=[f"synthetic_data/{file_name}"],
             destination_project_dataset_table=f"sacred-choir-466017-s9.{DATASET}.{table_name}",
             source_format="CSV",
             skip_leading_rows=1,
-            write_disposition="WRITE_APPEND",  # ✅ Append mode to avoid overwriting data
-            autodetect=True
+            write_disposition="WRITE_APPEND",  # ✅ Append instead of overwrite
+            autodetect=True,
+            field_delimiter=","  # ✅ safer for CSV files
         )
+        load_tasks.append(task)
+
+    # ✅ Run tasks in sequence (optional safety step)
+    for i in range(1, len(load_tasks)):
+        load_tasks[i] << load_tasks[i-1]
