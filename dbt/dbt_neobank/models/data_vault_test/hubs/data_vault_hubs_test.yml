@@ -1,5 +1,5 @@
 models:
-  - name: hub_notifications
+  - name: hub_notifications_test
     description: "{{ doc('__hub_notifications') }}"
     columns:
       - name: notification_id
@@ -21,8 +21,7 @@ models:
         data_tests:
           - not_null
 
-
-  - name: hub_transactions
+  - name: hub_transactions_test
     description: "{{ doc('__hub_transactions') }}"
     columns:
       - name: transaction_id
@@ -44,7 +43,7 @@ models:
         data_tests:
           - not_null
 
-  - name: hub_users
+  - name: hub_users_test
     description: "{{ doc('__hub_users') }}"
     columns:
       - name: user_id

@@ -1,5 +1,5 @@
 models:
-  - name: sat_user_dob
+  - name: sat_user_dob_test
     description: "{{ doc('__sat_user_dob') }}"
     columns:
       - name: user_hk
@@ -24,7 +24,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_country
+  - name: sat_user_country_test
     description: "{{ doc('__sat_user_country') }}"
     columns:
       - name: user_hk
@@ -49,8 +49,7 @@ models:
         data_tests:
           - not_null
 
-
-  - name: sat_user_creation
+  - name: sat_user_creation_test
     description: "{{ doc('__sat_user_creation') }}"
     columns:
       - name: user_hk
@@ -75,8 +74,7 @@ models:
         data_tests:
           - not_null
 
-
-  - name: sat_user_plan
+  - name: sat_user_plan_test
     description: "{{ doc('__sat_user_plan') }}"
     columns:
       - name: user_hk
@@ -101,7 +99,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_crypto
+  - name: sat_user_crypto_test
     description: "{{ doc('__sat_user_crypto') }}"
     columns:
       - name: user_hk
@@ -126,7 +124,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_mktg_push
+  - name: sat_user_mktg_push_test
     description: "{{ doc('__sat_user_mktg_push') }}"
     columns:
       - name: user_hk
@@ -149,7 +147,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_mktg_email
+  - name: sat_user_mktg_email_test
     description: "{{ doc('__sat_user_mktg_email') }}"
     columns:
       - name: user_hk
@@ -172,7 +170,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_contacts
+  - name: sat_user_contacts_test
     description:  "{{ doc('__sat_user_contacts') }}"
     columns:
       - name: user_hk
@@ -197,7 +195,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_user_device
+  - name: sat_user_device_test
     description: "{{ doc('__sat_user_device') }}"
     columns:
       - name: user_hk
@@ -222,8 +220,7 @@ models:
         data_tests:
           - not_null
 
-
-  - name: sat_trans_type
+  - name: sat_trans_type_test
     description: "{{ doc('__sat_trans_type') }}"
     columns:
       - name: transaction_hk
@@ -248,7 +245,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_currency
+  - name: sat_trans_currency_test
     description: "{{ doc('__sat_trans_currency') }}"
     columns:
       - name: transaction_hk
@@ -273,7 +270,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_amount_usd
+  - name: sat_trans_amount_usd_test
     description: "{{ doc('__sat_trans_amount_usd') }}"
     columns:
       - name: transaction_hk
@@ -298,7 +295,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_state
+  - name: sat_trans_state_test
     description: "{{ doc('__sat_trans_state') }}"
     columns:
       - name: transaction_hk
@@ -323,7 +320,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_cardholder
+  - name: sat_trans_cardholder_test
     description: "{{ doc('__sat_trans_cardholder') }}"
     columns:
       - name: transaction_hk
@@ -348,7 +345,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_country
+  - name: sat_trans_country_test
     description: "{{ doc('__sat_trans_country') }}"
     columns:
       - name: transaction_hk
@@ -373,7 +370,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_direction
+  - name: sat_trans_direction_test
     description: "{{ doc('__sat_trans_direction') }}"
     columns:
       - name: transaction_hk
@@ -398,7 +395,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_trans_creation
+  - name: sat_trans_creation_test
     description: "{{ doc('__sat_trans_creation') }}"
     columns:
       - name: transaction_hk
@@ -423,7 +420,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_notif_reason
+  - name: sat_notif_reason_test
     description: satellite table for reason of user notification
     columns:
       - name: notification_hk
@@ -448,7 +445,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_notif_channel
+  - name: sat_notif_channel_test
     description: satellite table for communcation channel of user notification
     columns:
       - name: notification_hk
@@ -473,7 +470,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_notif_status
+  - name: sat_notif_status_test
     description: satellite table for delivery status of user notification
     columns:
       - name: notification_hk
@@ -498,7 +495,7 @@ models:
         data_tests:
           - not_null
 
-  - name: sat_notif_creation
+  - name: sat_notif_creation_test
     description: satellite table for timestamp of user notification status
     columns:
       - name: notification_hk
