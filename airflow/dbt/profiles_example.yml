@@ -1,0 +1,47 @@
+dbt_lewagon:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: de-vm-migrated-2
+      dataset: dbt_lpalacios_day1
+      keyfile: /home/linam.palacios/.gcp_keys/de-vm-migrated-2.json
+      location: EU
+      threads: 2
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+  target: dev
+
+
+# Profile for neobank dev and  prod project
+dbt_neobank:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: sacred-choir-466017-s9
+      dataset: neobank_data_staging
+      keyfile: /app/neo-bank-key.json
+      threads: 2
+      location: EU
+
+    test:
+      type: bigquery
+      method: service-account
+      project: sacred-choir-466017-s9
+      dataset: test_synthetic_staging
+      keyfile: /app/neo-bank-key.json
+      threads: 2
+      location: EU
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: sacred-choir-466017-s9
+      dataset: neo_bank_production
+      keyfile: /app/neo-bank-key.json
+      threads: 2
+      location: EU
+
+  target: test
