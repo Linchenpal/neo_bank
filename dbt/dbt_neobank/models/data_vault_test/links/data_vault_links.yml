@@ -1,5 +1,5 @@
 models:
-  - name: link_user_transaction_test
+  - name: link_user_transaction
     description: "{{ doc('__link_user_transaction') }}"
     columns:
       - name: user_hk
@@ -10,7 +10,7 @@ models:
         description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
-      - name: user_transaction_hk_test
+      - name: user_transaction_hk
         description: "{{ doc('__hk') }}"
         data_tests:
           - unique
@@ -24,7 +24,7 @@ models:
         data_tests:
           - not_null
 
-  - name: link_user_notification_test
+  - name: link_user_notification
     description: "{{ doc('__link_user_notification') }}"
     columns:
       - name: user_hk
@@ -35,7 +35,7 @@ models:
         description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
-      - name: user_notification_hk_test
+      - name: user_notification_hk
         description: "{{ doc('__hk') }}"
         data_tests:
           - unique
