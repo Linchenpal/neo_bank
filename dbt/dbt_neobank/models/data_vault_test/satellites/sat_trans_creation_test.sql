@@ -1,1 +1,1 @@
-{{ transaction_satellite('stg_transactions', 'hub_transactions', 'transaction_hk', 'created_at') }}
+{{ transaction_satellite('stg_transactions_test', 'hub_transactions_test', 'transaction_hk_test', 'created_at') }}

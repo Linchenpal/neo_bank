@@ -1,1 +1,1 @@
-{{ notif_satellite('stg_notifications', 'hub_notifications', 'notification_hk', 'status') }}
+{{ notif_satellite('stg_notifications_test', 'hub_notifications_test', 'notification_hk_test', 'status') }}

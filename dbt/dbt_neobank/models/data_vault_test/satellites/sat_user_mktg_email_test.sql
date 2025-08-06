@@ -1,1 +1,1 @@
-{{ user_satellite('stg_users', 'hub_users', 'user_hk', 'marketing_email') }}
+{{ user_satellite('stg_users_test', 'hub_users_test', 'user_hk_test', 'marketing_email') }}
