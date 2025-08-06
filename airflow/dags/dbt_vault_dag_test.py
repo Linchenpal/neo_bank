@@ -21,18 +21,20 @@ with DAG(
     run_dbt_vault_test = BashOperator(
         task_id='run_dbt_vault_test',
         bash_command="""
-        cd /opt/airflow/dbt &&
+        cd /opt/airflow/dbt/dbt_neobank &&
         dbt run --select data_vault_test
-        """,
+        """
     )
 
     # Optionally, test them
     test_dbt_vault_test = BashOperator(
         task_id='test_dbt_vault_test',
         bash_command="""
-        cd /opt/airflow/dbt &&
+        cd /opt/airflow/dbt/dbt_neobank &&
         dbt test --select data_vault_test
-        """,
+        """
     )
+
+    run_dbt_vault_test >> test_dbt_vault_test
 
     run_dbt_vault_test >> test_dbt_vault_test
