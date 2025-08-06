@@ -1,0 +1,143 @@
+version: 2
+
+models:
+  - name: stg_devices_test
+    description: "{{ doc('__devices') }}"
+    columns:
+      - name: device_type
+        description: "{{ doc('__device_type') }}"
+        data_tests:
+          - not_null
+      - name: user_id
+        description: "{{ doc('__user_id') }}"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_notifications_test
+    description: "{{ doc('__notifications') }}"
+    columns:
+      - name: reason
+        description: "{{ doc('__reason') }}"
+        data_tests:
+          - not_null
+      - name: channel
+        description: "{{ doc('__channel') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_channel_within_accepted_values
+              values: ['EMAIL', 'PUSH', 'SMS']
+      - name: status
+        description: "{{ doc('__status') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_status_within_accepted_values
+              values: ['SENT', 'FAILED']
+      - name: user_id
+        description: "{{ doc('__user_id') }}"
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "{{ doc('__created_at') }}"
+        data_tests:
+          - not_null
+      - name: notification_id
+        description: "{{ doc('__notification_id') }}"
+        data_tests:
+          - not_null
+
+  - name: stg_transactions_test
+    description: "{{ doc('__transactions') }}"
+    columns:
+      - name: transaction_id
+        description: "{{ doc('__transaction_id') }}"
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_type
+        description:  "{{ doc('__transaction_type') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_transaction_type_within_accepted_values
+              values: ['REFUND', 'TOPUP', 'EXCHANGE', 'TRANSFER', 'CARD_PAYMENT', 'CARD_REFUND', 'ATM', 'FEE', 'CASHBACK', 'TAX']
+      - name: transaction_currency
+        description: "{{ doc('__transaction_currency') }}"
+        data_tests:
+          - not_null
+      - name: amount_usd
+        description: "{{ doc('__amount_usd') }}"
+        data_tests:
+          - not_null
+      - name: transaction_state
+        description: "{{ doc('__transaction_state') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_transaction_state_within_accepted_values
+              values: ['COMPLETED', 'CANCELLED', 'DECLINED', 'PENDING', 'REVERTED', 'FAILED']
+      - name: ea_cardholderpresence
+        description: "{{ doc('__ea_cardholderpresence') }}"
+        data_tests:
+          - not_null
+      - name: ea_merchant_country
+        description: "{{ doc('__ea_merchant_country') }}"
+        data_tests:
+          - not_null
+      - name: direction
+        description:  "{{ doc('__direction') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_direction_within_accepted_values
+              values: ['INBOUND', 'OUTBOUND']
+      - name: user_id
+        description: "{{ doc('__user_id') }}"
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "{{ doc('__created_at') }}"
+        data_tests:
+          - not_null
+
+  - name: stg_users_test
+    description: "{{ doc('__users') }}"
+    columns:
+      - name: user_id
+        description: "{{ doc('__user_id') }}"
+        data_tests:
+          - not_null
+          - unique
+      - name: birth_year
+        description: "{{ doc('__birth_year') }}"
+        data_tests:
+          - not_null
+      - name: country
+        description: "{{ doc('__country') }}"
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "{{ doc('__created_at') }}"
+        data_tests:
+          - not_null
+      - name: crypto_unlocked
+        description: "{{ doc('__crypto_unlocked') }}"
+        data_tests:
+          - not_null
+      - name: plan
+        description: "{{ doc('__plan') }}"
+        data_tests:
+          - not_null
+          - accepted_values:
+              name: is_user_plan_within_accepted_values
+              values: ['STANDARD', 'PREMIUM', 'METAL', 'METAL_FREE', 'PREMIUM_OFFER', 'PREMIUM_FREE']
+      - name: marketing_push
+        description: "{{ doc('__marketing_push') }}"
+      - name: marketing_email
+        description: "{{ doc('__marketing_email') }}"
+      - name: num_contacts
+        description: "{{ doc('__num_contacts') }}"
+        data_tests:
+          - not_null

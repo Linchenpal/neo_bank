@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw_test # logical name used in dbt models
+    schema: test_synthetic # BigQuery dataset
+
+    tables:
+      - name: devices
+        identifier: raw_devices_test
+      - name: notifications
+        identifier: raw_notifications_test
+      - name: transactions
+        identifier: raw_transactions_test
+      - name: users
+        identifier: raw_users_test
