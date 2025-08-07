@@ -22,7 +22,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="ingest_dag_prod",
+    dag_id="dbt_ingest_dag_test",
     schedule_interval=None,  # manual trigger only
     default_args=default_args,
     tags=["gcs_ingestion", "prod"]

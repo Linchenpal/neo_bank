@@ -5,7 +5,7 @@ SELECT
     {{ load_date() }} AS load_date,
     {{ load_end_date() }} AS load_end_date,
     {{ record_source(model_name) }} AS record_source
-FROM {{ ref(model_name) }} s
+FROM {{ custom_ref(model_name) }} s
 JOIN {{ ref(hub_model) }} h
   ON s.transaction_id = h.transaction_id
 {% endmacro %}

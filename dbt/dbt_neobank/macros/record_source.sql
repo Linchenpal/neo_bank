@@ -2,7 +2,11 @@
   {% if model_ref is none %}
     '{{ this.schema }}.{{ this.name }}'
   {% else %}
-    {% set target_model = ref(model_ref) %}
-    '{{ target_model.schema }}.{{ target_model.identifier }}'
+    {% if target.name == 'test_vault' %}
+      {% set schema = 'test_synthetic_staging' %}
+    {% else %}
+      {% set schema = this.schema %}
+    {% endif %}
+    '{{ schema }}.{{ model_ref }}'
   {% endif %}
 {% endmacro %}

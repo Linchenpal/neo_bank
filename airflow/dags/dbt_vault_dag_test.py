@@ -3,38 +3,31 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 default_args = {
-    'owner': 'airflow',
-    'depends_on_past': False,
-    'start_date': datetime(2025, 8, 1),
-    'retries': 1,
+    "start_date": datetime(2023, 1, 1),
+    "catchup": False,
 }
 
 with DAG(
-    dag_id='dbt_vault_test_dag',
-    default_args=default_args,
+    dag_id="dbt_vault_dag_test",
     schedule_interval=None,
-    catchup=False,
-    tags=['dbt', 'vault', 'test']
+    default_args=default_args,
+    tags=["dbt", "vault", "test"],
 ) as dag:
 
-    # Run all vault test models (hubs, links, satellites)
-    run_dbt_vault_test = BashOperator(
-        task_id='run_dbt_vault_test',
-        bash_command="""
-        cd /opt/airflow/dbt/dbt_neobank &&
-        dbt run --select data_vault_test
-        """
+    run_hubs = BashOperator(
+        task_id="run_hubs",
+        bash_command="cd /opt/airflow/dbt/dbt_neobank && dbt run --target test_vault --select data_vault/hubs",
     )
 
-    # Optionally, test them
-    test_dbt_vault_test = BashOperator(
-        task_id='test_dbt_vault_test',
-        bash_command="""
-        cd /opt/airflow/dbt/dbt_neobank &&
-        dbt test --select data_vault_test
-        """
+    run_links = BashOperator(
+        task_id="run_links",
+        bash_command="cd /opt/airflow/dbt/dbt_neobank && dbt run --target test_vault --select data_vault/links",
     )
 
-    run_dbt_vault_test >> test_dbt_vault_test
+    run_satellites = BashOperator(
+        task_id="run_satellites",
+        bash_command="cd /opt/airflow/dbt/dbt_neobank && dbt run --target test_vault --select data_vault/satellites",
+    )
 
-    run_dbt_vault_test >> test_dbt_vault_test
+    # Execution order (optional)
+    run_hubs >> run_links >> run_satellites

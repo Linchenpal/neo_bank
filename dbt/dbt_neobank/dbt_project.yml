@@ -31,20 +31,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_neobank:
-    # Config indicated by + and applies to all files under models/example/models:
-
     staging:
-      +schema: neobank_data_staging
-      +materialized: view
-
-    staging_test:
-      +schema: test_synthetic_staging
-      +materialized: view
+      +schema: "{{ target.schema }}"
+      +materialized: table
 
     data_vault:
-      +schema: neobank_data_vault
-      +materialized: view
+      +schema: "{{ target.schema }}"
+      +materialized: table
 
     mart:
-      +schema: neobank_data_marts
+      +schema: "{{ target.schema }}"
       +materialized: table
